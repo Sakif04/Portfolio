@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(45deg, #b359e7, #4cbbdc) center;
+  color: #08355a;
+  height: 110vh;
+  background-repeat: no-repeat;
+}
+
+@-webkit-keyframes Rotation {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100%;
+            transform-origin: 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform-origin: 100%;
+            transform-origin: 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes Rotation {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100%;
+            transform-origin: 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform-origin: 100%;
+            transform-origin: 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+#header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem 1rem;
+  color: #08355a;
+}
+
+#header #portfolio {
+  padding: 1rem;
+}
+
+#header #portfolio a {
+  text-decoration: none;
+  color: #08355a;
+}
+
+#header .navlist li {
+  padding: 5px 15px;
+  margin-left: 1rem;
+}
+
+#header .navlist li a {
+  text-decoration: none;
+  color: #08355a;
+}
+
+#header .navlist {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.content .heading {
+  text-align: center;
+}
+
+.content p {
+  margin: 2rem;
+  font-size: 2em;
+}
+
+#mid-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mid-section .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mid-section .contacts a {
+  background: white;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: #08355a;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#mid-section .contacts a i {
+  color: #08355a;
+}
+
+#mid-section #name {
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 0 3rem;
+}
+
+#mid-section .first-name {
+  opacity: 0;
+  color: white;
+}
+
+#mid-section .last-name {
+  padding-left: 5rem;
+  color: #08355a;
+}
+
+.rotate {
+  opacity: 1;
+  -webkit-animation: Rotation 0.5s ease-out;
+          animation: Rotation 0.5s ease-out;
+}
+
+.clock {
+  width: 15rem;
+  height: 15rem;
+  border: 10px dashed white;
+  border-radius: 50%;
+  margin: 1rem auto;
+  position: relative;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock #three,
+.clock #six,
+.clock #twelve,
+.clock #nine {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.clock #twelve {
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.clock #three {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+
+.clock #six {
+  font-weight: bold;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.clock #nine {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.clock #three,
+.clock #nine {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.clock-face {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  border-radius: 50%;
+}
+
+.clock-face .hand {
+  right: 50%;
+  background: #08355a;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: ease-in;
+  transition: ease-in;
+}
+
+.clock-face .min-hand {
+  height: 4px;
+  width: 40%;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.clock-face .second-hand {
+  background-color: red;
+  height: 2px;
+  width: 50%;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.clock-face .hour-hand {
+  height: 4px;
+  width: 25%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.clock-face .dot {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 65;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+}
+
+@media (max-width: 780px) {
+  .list {
+    display: none;
+  }
+  .list #navlist li a {
+    pointer-events: none;
+  }
+  .list.show {
+    display: block;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  #header {
+    display: block;
+  }
+  #header .menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  #header .menu .line {
+    background-color: #08355a;
+    margin-bottom: 3px;
+    width: 25px;
+    height: 3px;
+  }
+  #header .navlist {
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    padding: 1rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(34, 30, 30, 0.1);
+  }
+  #header .navlist li {
+    text-align: center;
+  }
+  #mid-section {
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  #mid-section #name {
+    font-size: 3rem;
+  }
+  #mid-section .clock {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
