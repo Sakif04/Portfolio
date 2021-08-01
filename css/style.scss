@@ -60,12 +60,32 @@ body {
   }
 }
 .content {
-  .heading {
+  h2.heading {
+    margin: 1rem;
     text-align: center;
   }
   p {
     margin: 2rem;
     font-size: 2em;
+  }
+}
+.projects {
+  display: flex;
+  margin: 3rem;
+  flex-direction: row;
+  li {
+    list-style: none;
+  }
+  .project {
+    color: $fontcolor;
+    width: 10vw;
+    padding: 2rem;
+    text-decoration: none;
+    text-align: center;
+    img {
+      width: 400px;
+      height: 200px;
+    }
   }
 }
 #mid-section {
@@ -80,7 +100,7 @@ body {
     a {
       background: rgb(255, 255, 255);
       font-size: 2rem;
-      margin: 0.5rem;
+      margin: 1rem;
       color: $fontcolor;
       padding: 5px;
       border-radius: 5px;

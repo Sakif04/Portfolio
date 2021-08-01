@@ -98,13 +98,42 @@ body {
           justify-content: flex-end;
 }
 
-.content .heading {
+.content h2.heading {
+  margin: 1rem;
   text-align: center;
 }
 
 .content p {
   margin: 2rem;
   font-size: 2em;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects li {
+  list-style: none;
+}
+
+.projects .project {
+  color: #08355a;
+  width: 10vw;
+  padding: 2rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.projects .project img {
+  width: 400px;
+  height: 200px;
 }
 
 #mid-section {
@@ -131,7 +160,7 @@ body {
 #mid-section .contacts a {
   background: white;
   font-size: 2rem;
-  margin: 0.5rem;
+  margin: 1rem;
   color: #08355a;
   padding: 5px;
   border-radius: 5px;
