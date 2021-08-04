@@ -1,7 +1,15 @@
-$background: linear-gradient(45deg, rgb(179, 89, 231), rgb(76, 187, 220)) center;
+$background: linear-gradient(
+    45deg,
+    rgba(91, 204, 110, 0.3),
+    rgba(76, 187, 220, 0.5)
+  ),
+  url('../images/bg.jpg');
 $font-family: 'Roboto', sans-serif;
 $fontcolor: rgb(8, 53, 90);
 
+html {
+  font-size: 16px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +18,9 @@ body {
   font-family: $font-family;
   background: $background;
   color: $fontcolor;
-  height: 110vh;
+  background-origin: center;
+  background-size: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -31,6 +41,7 @@ body {
   }
 }
 #header {
+  background-color: rgba(255, 255, 255, 0.05);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -45,18 +56,23 @@ body {
     text-decoration: none;
     color: $fontcolor;
   }
-  .navlist li {
-    padding: 5px 15px;
-    margin-left: 1rem;
-  }
-  .navlist li a {
-    text-decoration: none;
-    color: $fontcolor;
-  }
   .navlist {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    li {
+      padding: 5px 15px;
+      margin-left: 1rem;
+
+      :hover {
+        color: #fff;
+      }
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $fontcolor;
+      }
+    }
   }
 }
 .content {
@@ -70,25 +86,28 @@ body {
   }
 }
 .projects {
+  margin-top: 3rem;
+  justify-content: center;
   display: flex;
-  margin: 3rem;
+  flex-wrap: wrap;
+
   flex-direction: row;
   li {
     list-style: none;
   }
   .project {
     color: $fontcolor;
-    width: 10vw;
-    padding: 2rem;
+    margin: 2rem;
     text-decoration: none;
     text-align: center;
     img {
-      width: 400px;
-      height: 200px;
+      width: 24rem;
+      height: 12rem;
     }
   }
 }
 #mid-section {
+  margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -98,26 +117,33 @@ body {
     display: flex;
     justify-content: center;
     a {
-      background: rgb(255, 255, 255);
-      font-size: 2rem;
-      margin: 1rem;
+      font-size: 3rem;
+      margin-top: 2rem;
+      margin: 2rem;
       color: $fontcolor;
-      padding: 5px;
-      border-radius: 5px;
       text-decoration: none;
+      :hover {
+        color: white;
+        background-color: $fontcolor;
+      }
+
       i {
-        color: $fontcolor;
+        background: rgb(255, 255, 255);
+        border-radius: 5px;
+        padding: 0.5rem;
       }
     }
   }
 
   #name {
     z-index: 2;
-    margin: auto;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
     padding: 0 3rem;
+    .subtitle {
+      font-size: 1.5rem;
+    }
   }
   .first-name {
     opacity: 0;
@@ -134,7 +160,12 @@ body {
   opacity: 1;
   animation: Rotation 0.5s ease-out;
 }
-
+.logo {
+  width: 4rem;
+  color: #fff;
+  stroke: #fff;
+  fill: #ffffff;
+}
 .clock {
   width: 15rem;
   height: 15rem;
@@ -142,7 +173,7 @@ body {
   border-radius: 50%;
   margin: 1rem auto;
   position: relative;
-  padding: 1rem;
+  padding: 10px;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
     inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
   #three,
@@ -238,10 +269,25 @@ body {
   }
 }
 
-//mobile
-$maxWidth: 780px;
+//@laptop
+$maxWidth: 900px;
 
 @media (max-width: $maxWidth) {
+  html {
+    font-size: 12px;
+  }
+  #project-page {
+    height: 120vh;
+    width: 100vw;
+    background-size: cover;
+  }
+  #about-page {
+    height: 100vh;
+    background-size: cover;
+  }
+  .projects {
+    justify-content: center;
+  }
   .list {
     display: none;
     #navlist li a {
@@ -282,7 +328,7 @@ $maxWidth: 780px;
   #mid-section {
     width: 100vw;
     justify-content: center;
-    margin: 0 auto;
+    margin: 1rem auto;
     #name {
       font-size: 3rem;
     }
@@ -292,9 +338,19 @@ $maxWidth: 780px;
     }
   }
 }
+//!@mobile
 $mobWidth: 600px;
 @media (max-width: $mobWidth) {
-  body {
-    height: 100%;
+  html {
+    font-size: 8px;
+  }
+  #project-page {
+    height: 130vh;
+    width: 100vw;
+    background-size: cover;
+  }
+  #about-page {
+    height: 100vh;
+    background-size: cover;
   }
 }

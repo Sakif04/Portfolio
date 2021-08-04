@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +9,11 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(45deg, #b359e7, #4cbbdc) center;
+  background: linear-gradient(45deg, rgba(91, 204, 110, 0.3), rgba(76, 187, 220, 0.5)), url("../images/bg.jpg");
   color: #08355a;
-  height: 110vh;
+  background-origin: center;
+  background-size: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -54,6 +60,7 @@ body {
 }
 
 #header {
+  background-color: rgba(255, 255, 255, 0.05);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,16 +85,6 @@ body {
   color: #08355a;
 }
 
-#header .navlist li {
-  padding: 5px 15px;
-  margin-left: 1rem;
-}
-
-#header .navlist li a {
-  text-decoration: none;
-  color: #08355a;
-}
-
 #header .navlist {
   list-style: none;
   display: -webkit-box;
@@ -96,6 +93,21 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+#header .navlist li {
+  padding: 5px 15px;
+  margin-left: 1rem;
+}
+
+#header .navlist li :hover {
+  color: #fff;
+}
+
+#header .navlist li a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #08355a;
 }
 
 .content h2.heading {
@@ -109,10 +121,15 @@ body {
 }
 
 .projects {
+  margin-top: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -125,18 +142,18 @@ body {
 
 .projects .project {
   color: #08355a;
-  width: 10vw;
-  padding: 2rem;
+  margin: 2rem;
   text-decoration: none;
   text-align: center;
 }
 
 .projects .project img {
-  width: 400px;
-  height: 200px;
+  width: 24rem;
+  height: 12rem;
 }
 
 #mid-section {
+  margin-top: 2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,26 +175,34 @@ body {
 }
 
 #mid-section .contacts a {
-  background: white;
-  font-size: 2rem;
-  margin: 1rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin: 2rem;
   color: #08355a;
-  padding: 5px;
-  border-radius: 5px;
   text-decoration: none;
 }
 
+#mid-section .contacts a :hover {
+  color: white;
+  background-color: #08355a;
+}
+
 #mid-section .contacts a i {
-  color: #08355a;
+  background: white;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
 #mid-section #name {
   z-index: 2;
-  margin: auto;
   text-align: center;
   font-size: 5rem;
   font-weight: bold;
   padding: 0 3rem;
+}
+
+#mid-section #name .subtitle {
+  font-size: 1.5rem;
 }
 
 #mid-section .first-name {
@@ -196,6 +221,13 @@ body {
           animation: Rotation 0.5s ease-out;
 }
 
+.logo {
+  width: 4rem;
+  color: #fff;
+  stroke: #fff;
+  fill: #ffffff;
+}
+
 .clock {
   width: 15rem;
   height: 15rem;
@@ -203,7 +235,7 @@ body {
   border-radius: 50%;
   margin: 1rem auto;
   position: relative;
-  padding: 1rem;
+  padding: 10px;
   -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -316,7 +348,24 @@ body {
   background-color: red;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+  #project-page {
+    height: 120vh;
+    width: 100vw;
+    background-size: cover;
+  }
+  #about-page {
+    height: 100vh;
+    background-size: cover;
+  }
+  .projects {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .list {
     display: none;
   }
@@ -362,7 +411,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 auto;
+    margin: 1rem auto;
   }
   #mid-section #name {
     font-size: 3rem;
@@ -374,8 +423,17 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
-    height: 100%;
+  html {
+    font-size: 8px;
+  }
+  #project-page {
+    height: 130vh;
+    width: 100vw;
+    background-size: cover;
+  }
+  #about-page {
+    height: 100vh;
+    background-size: cover;
   }
 }
 /*# sourceMappingURL=style.css.map */
