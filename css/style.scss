@@ -5,7 +5,7 @@ $background: linear-gradient(
   ),
   url('../images/bg.jpeg');
 $font-family: 'Roboto', sans-serif;
-$fontcolor: rgb(8, 53, 90);
+$fontcolor: rgb(10, 45, 73);
 
 html {
   font-size: 16px;
@@ -83,6 +83,7 @@ html {
     text-align: center;
   }
   p {
+    color: rgb(224, 255, 246);
     margin: 2rem;
     font-size: 2em;
   }
@@ -297,9 +298,7 @@ $maxWidth: 900px;
   .list.show {
     display: block;
   }
-  .content p {
-    font-size: 1rem;
-  }
+
   #header {
     display: block;
     .menu {
