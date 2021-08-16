@@ -170,9 +170,9 @@ html {
   fill: #ffffff;
 }
 .clock {
-  width: 15rem;
-  height: 15rem;
-  border: 10px dashed rgb(255, 255, 255);
+  width: 20rem;
+  height: 20rem;
+  border: 1rem dashed rgb(255, 255, 255);
   border-radius: 50%;
   margin: 1rem auto;
   position: relative;
@@ -331,22 +331,23 @@ $maxWidth: 900px;
     #name {
       font-size: 3rem;
     }
-    .clock {
-      width: 12rem;
-      height: 12rem;
-    }
+    // .clock {
+    //   width: 12rem;
+    //   height: 12rem;
+    // }
   }
 }
 //!@mobile
 $mobWidth: 600px;
 @media (max-width: $mobWidth) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
   #project-page {
     height: 130vh;
     width: 100vw;
     background-size: cover;
+    background-position: center;
   }
   #about-page {
     height: 100vh;
