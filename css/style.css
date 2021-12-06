@@ -12,7 +12,7 @@ html {
 #about-page {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(45deg, rgba(91, 204, 110, 0.3), rgba(76, 187, 220, 0.5)), url("../images/bg.jpeg");
-  color: #0a2d49;
+  color: #39055c;
   background-origin: center;
   background-size: 100% 100%;
   height: 100vh;
@@ -75,7 +75,7 @@ html {
           align-items: center;
   font-family: 'Roboto', sans-serif;
   padding: 1rem 1rem;
-  color: #0a2d49;
+  color: #39055c;
 }
 
 #header #portfolio {
@@ -84,7 +84,7 @@ html {
 
 #header #portfolio a {
   text-decoration: none;
-  color: #0a2d49;
+  color: #39055c;
 }
 
 #header .navlist {
@@ -109,16 +109,17 @@ html {
 #header .navlist li a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: #0a2d49;
+  color: #39055c;
 }
 
 .content h2.heading {
   margin: 1rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 .content p {
-  color: #e0fff6;
+  color: white;
   margin: 2rem;
   font-size: 2em;
 }
@@ -144,7 +145,7 @@ html {
 }
 
 .projects .project {
-  color: #0a2d49;
+  color: #39055c;
   margin: 2rem;
   text-decoration: none;
   text-align: center;
@@ -181,13 +182,13 @@ html {
   font-size: 3rem;
   margin-top: 2rem;
   margin: 2rem;
-  color: #0a2d49;
+  color: #160a4b;
   text-decoration: none;
 }
 
 #mid-section .contacts a :hover {
   color: white;
-  background-color: #0a2d49;
+  background-color: #39055c;
 }
 
 #mid-section .contacts a i {
@@ -206,6 +207,7 @@ html {
 
 #mid-section #name .subtitle {
   font-size: 1.5rem;
+  color: #160a4b;
 }
 
 #mid-section .first-name {
@@ -215,7 +217,7 @@ html {
 
 #mid-section .last-name {
   padding-left: 5rem;
-  color: #0a2d49;
+  color: #160a4b;
 }
 
 .rotate {
@@ -247,6 +249,7 @@ html {
 .clock #six,
 .clock #twelve,
 .clock #nine {
+  color: #160a4b;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
@@ -303,7 +306,7 @@ html {
 
 .clock-face .hand {
   right: 50%;
-  background: #0a2d49;
+  background: #160a4b;
   position: absolute;
   top: 50%;
   -webkit-transition: ease-in;
@@ -385,7 +388,7 @@ html {
     right: 20px;
   }
   #header .menu .line {
-    background-color: #0a2d49;
+    background-color: #39055c;
     margin-bottom: 3px;
     width: 25px;
     height: 3px;
